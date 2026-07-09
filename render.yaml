@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: payguard-backend
+    env: java
+    plan: free
+    region: oregon
+    # Since backend is in /backend, navigate and compile there
+    buildCommand: "cd backend && mvn clean package -DskipTests"
+    startCommand: "java -jar backend/target/payguard-backend-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: FRONTEND_URL
+        value: https://payguard.vercel.app # Change this to your deployed Vercel frontend URL
+      - key: RAZORPAY_KEY_ID
+        sync: false # Set this in Render dashboard
+      - key: RAZORPAY_KEY_SECRET
+        sync: false # Set this in Render dashboard
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false # Set this in Render dashboard
