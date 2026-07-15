@@ -13,11 +13,11 @@ PayGuard sits between your checkout flow and your payment gateway (Razorpay), ad
 
 ## Tech Stack
 
-Backend: Java 17+, Spring Boot 3.x (Web, JPA), Spring Task Scheduling (@Scheduled, 30s reconciliation), SLF4J & Logback
+Backend: Java 17+, Spring Boot 3.x (Web, JPA), Spring Task Scheduling (Scheduled, 30s reconciliation).
 Database: H2 (in-memory/file-based), Hibernate / Spring Data JPA
-Payments & Security: Razorpay Java SDK (v1.4.9), Razorpay Checkout.js, HMAC-SHA256 (webhook signature verification)
+Payments & Security: Razorpay Java SDK, Razorpay Checkout.js, HMAC-SHA256 (webhook signature verification)
 Frontend: React 18+, Vite, Tailwind CSS v3, Lucide React, Recharts
-Build & Deployment: Apache Maven (v3.9.16), npm/Node.js, render.yaml (Render.com), Vercel (Vite build target)
+Build & Deployment: Apache Maven , npm/Node.js, render.yaml (Render.com), Vercel (Vite build target)
 
 
 
